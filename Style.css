@@ -23,7 +23,6 @@ nav {
 }
 
 nav .links a {
-  text-decoration: none;
   cursor: pointer;
   text-transform: uppercase;
   margin: 10px;
@@ -134,4 +133,36 @@ nav .links a {
 .projects div img {
   width: 100%;
   height: auto;
+}
+
+
+
+.projectabout {
+  width: 100vw;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1.7fr 1.3fr;
+}
+
+.head h3 {
+  margin: 20px;
+  font-weight: 800;
+  font-size: 28px;
+}
+.details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.details div {
+  border-top: 1px solid rgba(0, 0, 0, 0.16);
+  margin: 20px;
+  padding: 10px;
+}
+.details div h3 {
+  font-size: 48px;
+  font-weight: 800;
+}
+.details div p {
+  font-weight: 400;
+  font-size: 20px;
 }
