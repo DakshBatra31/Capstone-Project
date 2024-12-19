@@ -76,6 +76,11 @@ nav .nav-links a {
   width: 400px;
   height: auto;
   padding: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.frames img:hover {
+  transform: scale(1.1);
 }
 
 .frames p {
