@@ -9,9 +9,11 @@
   font-family: "Libre Franklin", sans-serif;
   font-weight: 400;
   font-style: normal;
-  overflow-x: hidden;
 }
-.nav-image img {
+p {
+  font-family: "Source Serif 4", serif;
+}
+.logo img {
   width: 80%;
 }
 nav {
@@ -23,14 +25,16 @@ nav {
   border-bottom: 1px solid rgba(0, 0, 0, 0.16);
 }
 
-nav .links a {
+nav .nav-links a {
+  text-decoration: none;
   cursor: pointer;
   text-transform: uppercase;
   margin: 10px;
   color: black;
   font-size: 20px;
 }
-.ham{
+
+.ham {
   display: none;
 }
 
@@ -48,6 +52,9 @@ nav .links a {
   font-size: 120px;
   font-weight: 800;
   margin-bottom: 20px;
+}
+.image {
+  margin: 20px;
 }
 .image img {
   width: 100%;
@@ -79,11 +86,11 @@ nav .links a {
 }
 
 .frames p:nth-child(3) {
+  color: rgba(0, 0, 0, 0.6);
   padding-top: 0px;
   padding-bottom: 10px;
   font-size: 15px;
 }
-
 .about {
   padding: 156px 10px;
   display: flex;
@@ -94,13 +101,11 @@ nav .links a {
 }
 
 .about div {
-  /* text-align: justify; */
-  width: 50vw; /*Remove While making it Resposive*/
+  width: 50vw; 
   font-size: 30px;
 }
 .container {
   position: relative;
-  /* text-align: center; */
   text-wrap: wrap;
   color: white;
 }
@@ -134,12 +139,28 @@ nav .links a {
   cursor: pointer;
   border: none;
 }
+
+.view-projects-btn {
+  background-color: white; 
+  color: black; 
+  border: 2px solid black;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.view-projects-btn:hover {
+  background-color: black; 
+  color: white;
+}
+
 .projects div img {
   width: 100%;
   height: auto;
 }
-
-
 
 .projectabout {
   width: 100vw;
@@ -171,7 +192,6 @@ nav .links a {
   font-size: 20px;
 }
 
-
 .clients {
   margin: 150px 0;
 }
@@ -182,7 +202,7 @@ nav .links a {
   font-weight: 800;
   margin: 20px 0;
 }
-/* Client Say Sections */
+
 .main-container {
   display: flex;
   flex-wrap: wrap;
@@ -244,21 +264,54 @@ nav .links a {
   margin: 20px;
   flex-wrap: wrap;
 }
-.rating div {
+.rating input {
   width: 56px;
   height: 64px;
-  padding: 20px;
+  padding: 10px;
   border: 1px solid;
   margin: 8px;
   border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold; 
+  text-align: center;
+  outline: none;
   transition: 0.3s;
 }
-.rating div:hover {
-  background-color: rgba(204, 11, 11, 1);
-  color: white;
+
+.rating input:focus {
+  border-color: rgba(204, 11, 11, 1);
+  box-shadow: 0 0 5px rgba(204, 11, 11, 0.8);
 }
+
+.rating input::placeholder {
+  font-weight: bold;
+  color: rgba(128, 128, 128, 0.6);
+}
+
+.rating input:hover {
+  background-color: rgba(204, 11, 11, 0.1);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .rating input {
+    width: 45px;
+    height: 50px;
+    font-size: 14px;
+    margin: 6px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .rating input {
+    width: 35px;
+    height: 40px;
+    font-size: 12px;
+    margin: 4px; 
+  }
+}
+
+
 .submit {
   width: 100%;
   padding: 8px;
@@ -268,6 +321,7 @@ nav .links a {
   background-color: rgba(204, 11, 11, 1);
   cursor: pointer;
   color: white;
+  margin: 10px;
 }
 .getintouch a {
   display: block;
@@ -375,6 +429,9 @@ footer button:hover {
   }
   .ham {
     display: block;
+  }
+  .nav-items a {
+    color: white !important;
   }
 }
 @media (max-width: 440px) {
